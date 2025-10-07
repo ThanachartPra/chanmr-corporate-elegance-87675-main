@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Thai Corporate Blue & Gold Theme */
+    --background: 0 0% 100%;
+    --foreground: 220 50% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 50% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 50% 15%;
+
+    /* Deep Royal Blue - Corporate Trust */
+    --primary: 220 80% 25%;
+    --primary-light: 220 70% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Thai Gold - Elegance & Prosperity */
+    --accent: 45 90% 55%;
+    --accent-light: 45 95% 65%;
+    --accent-foreground: 220 80% 25%;
+
+    --secondary: 220 20% 96%;
+    --secondary-foreground: 220 50% 15%;
+
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 20% 50%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 90%;
+    --input: 220 20% 90%;
+    --ring: 220 80% 25%;
+
+    --radius: 0.5rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 80% 25%), hsl(220 70% 40%));
+    --gradient-accent: linear-gradient(135deg, hsl(45 90% 55%), hsl(45 95% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 80% 25%) 0%, hsl(220 70% 35%) 50%, hsl(45 90% 55%) 100%);
+    
+    /* Shadows */
+    --shadow-elegant: 0 10px 40px -10px hsl(220 80% 25% / 0.2);
+    --shadow-glow: 0 0 30px hsl(45 90% 55% / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(220 50% 15% / 0.1);
+
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 220 50% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 45% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 45% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 220 70% 50%;
+    --primary-light: 220 75% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --accent: 45 90% 60%;
+    --accent-light: 45 95% 70%;
+    --accent-foreground: 220 50% 8%;
+
+    --secondary: 220 40% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 35% 18%;
+    --muted-foreground: 220 15% 65%;
+
+    --border: 220 35% 20%;
+    --input: 220 35% 20%;
+    --ring: 220 70% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
